@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class Ex1 {
     public static void main(String[] args) {
 
-        int playAgain;
-        Scanner scnr = new Scanner(System.in);
-
         // play game until user exits
         do {
             int numOfGuesses = 0;
@@ -61,17 +58,11 @@ public class Ex1 {
             }
 
             // ask if user wants to play again
-            // prevent invalid inputs
-            do {
-                System.out.print("Would you like to play again? type '1' for yes or type '0' for no: ");
-                playAgain = scnr.nextInt();
-            }
-            while (playAgain < 0 || playAgain > 1);
+            System.out.print("Do you want to play another game? ");
 
         }
-
-        while (playAgain == 1);
-        System.out.println("Good bye!");
+        while (yes());
+        //System.out.println("Good bye!");
 
     }
 
